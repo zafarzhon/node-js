@@ -1,3 +1,9 @@
+const {
+    rejects
+} = require('assert')
+const {
+    count
+} = require('console')
 const fs = require('fs')
 const path = require('path')
 
@@ -83,3 +89,43 @@ const path = require('path')
 
 // removeFileAsync(path.resolve(__dirname,'text.txt'))
 // .then(()=> console.log('succses removed'))
+
+// через переменную окружения передать строку, записать ее в файл
+// прочитать файл, посчитать кол-во слов в файле и записать
+// их в новый файл count.txt,затем удалить первый файл
+
+
+// let text = process.env.TEXT || ''
+
+// const writeFileAsync = async (path, data) => {
+//     return new Promise((resolve, reject) => fs.writeFile(path, data, (err) => {
+//         if (err) {
+//             return reject(err)
+//         }
+//         resolve()
+//     }))
+// }
+// const readFileAsync = async path => {
+//     return new Promise((resolve, reject) => fs.readFile(path, {
+//         encoding: 'utf-8'
+//     }, (err, data) => {
+//         if (err) {
+//             return reject(err)
+//         }
+//         console.log(typeof data)
+//         resolve(data)
+//     }))
+// }
+// const removeFileAsync = async path => {
+//     return new Promise((resolve, reject) => fs.rm(path, (err) => {
+//         if (err) {
+//             return reject(err)
+//         }
+//         resolve()
+//     }))
+// }
+// writeFileAsync(path.resolve(__dirname, 'text.txt'), text)
+//     .then(() => readFileAsync(path.resolve(__dirname,'text.txt')))
+//     .then((data) => writeFileAsync(path.resolve(__dirname, 'count.txt'), `${data.length}`))
+//     .then(() => removeFileAsync(path.resolve(__dirname,'text.txt')))
+//     .catch(err => console.log(err))
