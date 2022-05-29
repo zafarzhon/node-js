@@ -4,11 +4,13 @@
   "description": "node js tutorial",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./lessons/process.js"
   },
   "author": "John",
   "license": "ISC",
   "dependencies": {
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.1",
     "nodemon": "^2.0.16"
   }
 }
