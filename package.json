@@ -4,7 +4,7 @@
   "description": "node js tutorial",
   "main": "index.js",
   "scripts": {
-    "start": "node ./lessons/process.js"
+    "start": "nodemon index.js"
   },
   "author": "John",
   "license": "ISC",
